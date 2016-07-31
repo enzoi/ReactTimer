@@ -7,9 +7,13 @@ var CountdownForm = React.createClass({
     e.preventDefault(); // prevent the page from reloading
     var strSeconds = this.refs.seconds.value; // user input from the input form
 
+    console.log('input count', $('input').length);
+
     if (strSeconds.match(/^[0-9]*$/)) { // chekck if valid seconds entered
       this.refs.seconds.value = '';
-      this.props.onSetCountdown(parseInt(strSeconds, 10));
+      this.props.onSetCountdown(parseInt(strSeconds, 10)); // call parent function
+      // will appear in CountdownFrom compoent in the parent compoent
+      // feed vaild seconds data to parent function
     }
   },
   render: function () {
