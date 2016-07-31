@@ -1,5 +1,6 @@
 var React = require('react');
 
+// shared by both Timer and Countdown
 var Clock = React.createClass({
   getDefaultProps: function() {
     totalSeconds: 0

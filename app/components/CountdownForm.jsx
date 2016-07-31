@@ -1,12 +1,13 @@
 var React = require('react');
 
+// Accept seconds from user and start countdown when button clicked
 var CountdownForm = React.createClass({
 
   onSubmit: function (e) {
-    e.preventDefault();
-    var strSeconds = this.refs.seconds.value;
+    e.preventDefault(); // prevent the page from reloading
+    var strSeconds = this.refs.seconds.value; // user input from the input form
 
-    if (strSeconds.match(/^[0-9]*$/)) {
+    if (strSeconds.match(/^[0-9]*$/)) { // chekck if valid seconds entered
       this.refs.seconds.value = '';
       this.props.onSetCountdown(parseInt(strSeconds, 10));
     }

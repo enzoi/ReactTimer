@@ -1,7 +1,8 @@
 var React = require('react');
 var Navigation = require('Navigation');
-var Timer = require('Timer');
-var Countdown = require('Countdown');
+var Timer = require('Timer'); // child
+var Countdown = require('Countdown'); // child
+
 
 var Main = (props) => {
     return (
